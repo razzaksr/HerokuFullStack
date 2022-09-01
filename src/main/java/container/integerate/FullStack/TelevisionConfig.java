@@ -1,6 +1,7 @@
 package container.integerate.FullStack;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class TelevisionConfig{
 		UserDetails myUser2=User.withDefaultPasswordEncoder().username("prabakaran").
 				password("ravanan").roles("USER").build();
 		
-		Collection<UserDetails> myusers=Stream.of(myUser1,myUser2).toList();
+		Collection<UserDetails> myusers=Stream.of(myUser1,myUser2).collect(Collectors.toList());
 		
 		return new InMemoryUserDetailsManager(myusers);
 	}
