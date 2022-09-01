@@ -14,7 +14,7 @@
 	<name>FullStack</name>
 	<description>React ans Spring Integerated Full stack</description>
 	<properties>
-		<java.version>17</java.version>
+		<java.version>18</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
